@@ -2,7 +2,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    console.log(req.url,req.method,req.handlers);
+    console.log(req.url,req.method,req.headers);
     //process.exit() is used to stop the server after the first request is received. This is just for demonstration purposes. In a real application, you would typically not want to stop the server after handling a request.
     
 });
