@@ -2,12 +2,13 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    console.log(req);
+    console.log(req.url,req.method,req.handlers);
+    //process.exit() is used to stop the server after the first request is received. This is just for demonstration purposes. In a real application, you would typically not want to stop the server after handling a request.
+    
 });
 
-const PORT = 3000;
+const PORT = 3001;
 server.listen(PORT,  () => {
     console.log(`Server is running on address http://localhost:${PORT}`);
 });
-
 
