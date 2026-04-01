@@ -1,6 +1,7 @@
 const sumRequestHandler = (req, res) => {
     console.log("Inside sumRequestHandler",req.url);
     const body = [];
+    let result;
     req.on('data',chunk => {
         body.push(chunk);
         req.on('end', () => {
@@ -24,4 +25,12 @@ const sumRequestHandler = (req, res) => {
     });
 };
 
+
+
 exports.sumRequestHandler = sumRequestHandler;
+
+
+// 1.sum req hangler
+// sending response
+//chunk came
+//end event
